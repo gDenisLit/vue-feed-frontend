@@ -9,36 +9,36 @@ export const commentService = {
   getById,
 }
 
-//_createComments()
+//_createfeeds()
 
 function query(filterBy) {
   // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
-  return httpService.get('comment', filterBy)
-  // return storageService.query('comment')
+  return httpService.get('feed', filterBy)
+  // return storageService.query('feed')
 }
 
-async function getById(commentId) {
-  return httpService.get(`comment/${commentId}`)
-  // return storageService.get('comment', commentId)
+async function getById(feedId) {
+  return httpService.get(`feed/${feedId}`)
+  // return storageService.get('feed', feedId)
 }
 
-function save(comment) {
-  // if (comment._id) return storageService.put('comment', comment)
-  // else return storageService.post('comment', comment)
+function save(feed) {
+  // if (feed._id) return storageService.put('feed', feed)
+  // else return storageService.post('feed', feed)
 
-  if (comment._id) return httpService.put(`comment/${comment._id}`, comment)
-  else return httpService.post('comment', comment)
+  if (feed._id) return httpService.put(`feed/${feed._id}`, feed)
+  else return httpService.post('feed', feed)
 }
 
-function remove(commentId) {
-  return httpService.delete(`comment/${commentId}`)
-  // return storageService.remove('comment', commentId)
+function remove(feedId) {
+  return httpService.delete(`feed/${feedId}`)
+  // return storageService.remove('feed', feedId)
 }
 
-// function _createComments() {
-//   let comments = JSON.parse(localStorage.getComment('comment'))
-//   if (!comments) {
-//     comments = utilService.getDemoComments()
+// function _createfeeds() {
+//   let feeds = JSON.parse(localStorage.getfeed('feed'))
+//   if (!feeds) {
+//     feeds = utilService.getDemofeeds()
 //   }
-//   localStorage.setComment('comment', JSON.stringify(comments))
+//   localStorage.setfeed('feed', JSON.stringify(feeds))
 // }
