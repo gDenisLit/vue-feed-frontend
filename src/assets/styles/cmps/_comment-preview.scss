@@ -1,9 +1,11 @@
 .comment-preview {
-    padding: rem(10px);
+    max-width: max-content;
+    margin-block-end: rem(15px);
 
     img {
         border-radius: rem(5px);
         width: rem(50px);
+        height: rem(50px);
         margin-inline-end: rem(10px);
     }
 

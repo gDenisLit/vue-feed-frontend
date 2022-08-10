@@ -1,6 +1,4 @@
 import { httpService } from './http.service'
-import { utilService } from './util.service'
-import { storageService } from './async-storage.service'
 
 export const commentService = {
   query,

@@ -1,0 +1,21 @@
+.main-app {
+    padding-top: rem(20px);
+
+    &__inner {
+        width: 100%;
+        background-color: $light-color3;
+        padding: rem(30px);
+
+        .wrapper {
+            width: max-content;
+            height: min-content;
+            padding: rem(30px);
+            background-color: $light-color2;
+
+            .bottom-wrapper {
+                background-color: $light-color;
+                padding: rem(20px);
+            }
+        }
+    }
+}

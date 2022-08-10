@@ -1,8 +1,14 @@
 <template>
-  <section class="main-app main-layout ">
-    <comment-submit />
-    <comment-filter />
-    <comment-list />
+  <section class="main-app main-layout full">
+    <div class="main-app__inner flex justify-center">
+      <div class="wrapper flex flex-column justify-center ">
+        <comment-submit />
+        <div class="bottom-wrapper">
+          <comment-filter />
+          <comment-list />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -13,14 +19,7 @@ import commentFilter from './cmps/comment-filter.vue'
 
 export default {
   name: 'app',
-  components: {},
-  created() {
-    this.$store.dispatch({ type: 'loadComments' })
-  },
-  components: {
-    commentSubmit,
-    commentList,
-    commentFilter,
-  },
+  created() { this.$store.dispatch({ type: 'loadComments' }) },
+  components: { commentSubmit, commentList, commentFilter, },
 }
 </script>

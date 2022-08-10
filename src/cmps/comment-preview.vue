@@ -1,6 +1,6 @@
 <template>
     <section>
-        <li class="comment-preview flex" v-if="comment">
+        <li class="comment-preview flex items-center" v-if="comment">
             <img :src="'https://www.gravatar.com/avatar/' + comment.imgId" />
             <div class="info-wrapper flex flex-column justify-center">
                 <h3>{{ comment.email }}</h3>
@@ -14,12 +14,6 @@
 
 export default {
     name: 'comment-preview',
-    props: {
-        comment: Object,
-    },
-    methods: {
-    },
-    computed: {
-    }
+    props: {comment: Object,}
 }
 </script>

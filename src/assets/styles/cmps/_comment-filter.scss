@@ -1,0 +1,9 @@
+input {
+    padding: rem(12px);
+    width: 100%;
+    margin-block-end: rem(20px);
+
+    &::placeholder {
+        text-transform: capitalize;
+    }
+}

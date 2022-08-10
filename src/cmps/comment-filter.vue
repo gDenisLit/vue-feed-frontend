@@ -1,15 +1,18 @@
 <template>
-  <input type="text" v-model="filterBy.txt" placeholder="filter" @input="debounceTxt" />
+  <input type="text" 
+    v-model="filterBy.txt" 
+    placeholder="filter" 
+    @input="debounceTxt" 
+  />
 </template>
+
 <script>
 import { debounce } from 'lodash'
 export default {
   name: 'comment-filter',
   data() {
     return {
-      filterBy: {
-        txt: '',
-      },
+      filterBy: {txt: ''},
       debounceTxt: null
     }
   },

@@ -10,14 +10,10 @@
 @import 'basic/layout';
 
 //Views
-@import 'views/list';
-@import 'views/details';
-@import 'views/edit';
-
+@import 'views/app';
 
 // Components
 @import 'cmps/comment-preview';
 @import 'cmps/comment-submit';
-@import 'cmps/comment-list';
 @import 'cmps/comment-filter';
 
