@@ -5,7 +5,7 @@
             <button @click="$router.push('/edit/')">Add New</button>
             <ul class="list-wrapper clean-list" v-if="items">
                 <li v-for="item in items" :key="item.id">
-                    <item-preview :item="item" @crudReq="doCrud" />
+                    <comment-preview :item="item" @crudReq="doCrud" />
                 </li>
             </ul>
         </section>
@@ -14,7 +14,7 @@
 
 <script>
 import { showErrorMsg } from '../services/event-bus.service'
-import itemPreview from '../cmps/item-preview.vue'
+import commentPreview from '../cmps/comment-preview.vue'
 export default {
     name: '',
     computed: {
@@ -26,6 +26,6 @@ export default {
             catch (err) { showErrorMsg('Ooops, something went wrong') }
         }
     },
-    components: { itemPreview },
+    components: { commentPreview },
 }
 </script>

@@ -35,7 +35,6 @@
 <script>
 import { itemService } from '../services/comment.service'
 import { showErrorMsg } from '../services/event-bus.service'
-import backBtn from '../cmps/back-btn.vue'
 export default {
   name: 'item-details',
   data() {
@@ -55,6 +54,5 @@ export default {
       showErrorMsg('Item not found')
     }
   },
-  components: { backBtn },
 }
 </script>
