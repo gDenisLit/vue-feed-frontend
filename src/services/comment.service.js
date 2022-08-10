@@ -1,7 +1,6 @@
 import { httpService } from './http.service'
 import { utilService } from './util.service'
 import { storageService } from './async-storage.service'
-import { userService } from './user.service'
 // import { socketService, SOCKET_EVENT_ITEM_ADDED } from './socket.service'
 
 export const itemService = {

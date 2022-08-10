@@ -12,7 +12,7 @@
 import { showErrorMsg } from '../services/event-bus.service'
 import { itemService } from '../services/comment.service'
 import { utilService } from '../services/util.service'
-import backBtn from '../cmps/back-btn.vue'
+//import backBtn from '../cmps/back-btn.vue'
 
 export default {
   name: '',
@@ -42,7 +42,7 @@ export default {
 
     if (!this.item) this.item = utilService.getEmptyItem()
   },
-  components: { itemEditForm, backBtn },
+  //components: { itemEditForm, backBtn },
 }
 </script>
 
