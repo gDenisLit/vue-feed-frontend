@@ -1,17 +1,7 @@
 <template>
-<<<<<<< HEAD
   <form @submit.prevent="submitComment" class="item-edit flex flex-column">
-=======
-  <form @submit="submitComment" class="submit-comment flex flex-column">
->>>>>>> 06f216a4763a8e1053bbe2f6a3562ffc7a1a5184
     <input type="email" v-model="comment.email" placeholder="Email" />
-    <textarea
-      cols="30"
-      rows="10"
-      v-model="comment.txt"
-      placeholder="Message"
-    ></textarea>
-
+    <textarea cols="30" rows="10" v-model="comment.txt" placeholder="Message"></textarea>
     <button>Submit</button>
   </form>
 </template>
@@ -46,6 +36,6 @@ export default {
       this.comment.txt = ''
     },
   },
-  created() {},
+  created() { },
 }
 </script>
