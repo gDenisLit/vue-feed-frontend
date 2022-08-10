@@ -1,8 +1,4 @@
-<template>
-  <app-header />
-  <router-view />
-  <!-- <app-footer /> -->
-</template>
+<template></template>
 
 <script>
 import appHeader from './cmps/app-header.vue'
@@ -11,7 +7,7 @@ export default {
   name: 'app',
   components: {
     appHeader,
-    appFooter
+    appFooter,
   },
   created() {
     this.$store.dispatch({ type: 'loadItems' })
