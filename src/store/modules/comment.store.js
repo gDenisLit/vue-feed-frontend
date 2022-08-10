@@ -21,9 +21,10 @@ export const commentStore = {
     },
   },
   actions: {
-    async loadComments({ commit }) {
+    async loadComments({ commit }, { filterBy }) {
       try {
-        const comments = await commentService.query()
+        if (!filterBy) filterBy = { txt: '' }
+        const comments = await commentService.query(filterBy)
         commit({ type: 'setComments', comments })
       } catch (err) {
         console.log('commentStore: Error in loadComments', err)

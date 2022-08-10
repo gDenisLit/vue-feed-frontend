@@ -13,7 +13,7 @@ export const commentService = {
 
 function query(filterBy) {
   // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
-  return httpService.get('comment')
+  return httpService.get('comment', filterBy)
   // return storageService.query('comment')
 }
 
