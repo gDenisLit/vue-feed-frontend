@@ -1,7 +1,6 @@
 import { httpService } from './http.service'
 import { utilService } from './util.service'
 import { storageService } from './async-storage.service'
-import { userService } from './user.service'
 
 export const commentService = {
   query,
@@ -10,7 +9,7 @@ export const commentService = {
   getById,
 }
 
-_createComments()
+//_createComments()
 
 function query(filterBy) {
   // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
