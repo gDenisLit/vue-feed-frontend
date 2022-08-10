@@ -3,8 +3,7 @@
 <script>
 export default {
   name: 'app',
-  components: {
-  },
+  components: {},
   created() {
     this.$store.dispatch({ type: 'loadComments' })
   },
