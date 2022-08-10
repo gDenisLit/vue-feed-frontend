@@ -10,8 +10,7 @@ import commentList from './cmps/comment-list.vue'
 import filter from './cmps/filter.vue'
 export default {
   name: 'app',
-  components: {
-  },
+  components: {},
   created() {
     this.$store.dispatch({ type: 'loadComments' })
   },
