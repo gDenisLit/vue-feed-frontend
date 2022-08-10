@@ -1,0 +1,17 @@
+.comment-preview {
+    padding: rem(10px);
+
+    img {
+        border-radius: rem(5px);
+        width: rem(50px);
+        margin-inline-end: rem(10px);
+    }
+
+    h3 {
+        margin-block-end: rem(3px);
+    }
+
+    p {
+        color: $dark-color5;
+    }
+}
