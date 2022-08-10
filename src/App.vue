@@ -1,13 +1,14 @@
 <template>
-  <submit-Comment />
+  <comment-submit />
   <filter />
   <comment-list />
 </template>
 
 <script>
-import submitComment from './cmps/submit-comment.vue'
+import commentSubmit from './cmps/comment-submit.vue'
 import commentList from './cmps/comment-list.vue'
 import filter from './cmps/filter.vue'
+import CommentSubmit from './cmps/comment-submit.vue'
 export default {
   name: 'app',
   components: {},
@@ -15,9 +16,10 @@ export default {
     this.$store.dispatch({ type: 'loadComments' })
   },
   components: {
-    submitComment,
+    commentSubmit,
     commentList,
-    filter
-  }
+    filter,
+    CommentSubmit,
+  },
 }
 </script>
