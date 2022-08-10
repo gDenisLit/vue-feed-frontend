@@ -24,11 +24,7 @@ export default {
       try {
         const filterBy = JSON.parse(JSON.stringify(this.filterBy))
         await this.$store.dispatch({ type: 'loadComments', filterBy })
-      } catch (err) {
-        console.log(err)
-      } finally {
-        this.filterBy.txt = ''
-      }
+      } catch (err) {console.log(err)}
     },
   },
 }
