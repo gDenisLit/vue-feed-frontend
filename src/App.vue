@@ -1,7 +1,9 @@
 <template>
-  <comment-submit />
-  <comment-filter />
-  <comment-list />
+  <section class="main-app main-layout ">
+    <comment-submit />
+    <comment-filter />
+    <comment-list />
+  </section>
 </template>
 
 <script>

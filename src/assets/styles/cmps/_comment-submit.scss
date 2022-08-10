@@ -1,0 +1,27 @@
+.main-app {
+    justify-items: center;
+}
+
+.submit-comment {
+    width: rem(550px);
+    margin-top: rem(75px);
+    input{
+        padding: rem(12px);
+        margin-bottom: rem(20px);
+        
+    }
+    textarea{
+        padding: rem(12px);
+        height: rem(130px);
+        font-size: rem(15px);
+        margin-bottom: rem(15px);
+    }
+    button{
+        width: rem(65px);
+        height: rem(35px);
+        text-align: center;
+        background-color: rgb(50, 162, 227);
+        border: none;
+        border-radius: rem(5px);
+    }
+}
