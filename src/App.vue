@@ -6,7 +6,7 @@ export default {
   components: {
   },
   created() {
-    this.$store.dispatch({ type: 'loadItems' })
+    this.$store.dispatch({ type: 'loadComments' })
   },
 }
 </script>

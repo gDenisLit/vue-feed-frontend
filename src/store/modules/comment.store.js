@@ -1,5 +1,4 @@
-import { itemService } from '../../services/item.service'
-import { socketService } from '../../services/socket.service'
+import { commentService } from '../../services/comment.service'
 
 export const commentStore = {
   state: {

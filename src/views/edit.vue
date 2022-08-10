@@ -10,7 +10,7 @@
 
 <script>
 import { showErrorMsg } from '../services/event-bus.service'
-import { itemService } from '../services/comment.service'
+import { commentService } from '../services/comment.service'
 import { utilService } from '../services/util.service'
 //import backBtn from '../cmps/back-btn.vue'
 
@@ -35,7 +35,7 @@ export default {
   async created() {
     const { id } = this.$route.params
     try {
-      this.item = await itemService.getById(id)
+      this.item = await commentService.getById(id)
     } catch (err) {
       showErrorMsg('Item not found')
     }
