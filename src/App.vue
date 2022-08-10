@@ -1,14 +1,14 @@
 <template>
   <comment-submit />
-  <filter />
+  <comment-filter />
   <comment-list />
 </template>
 
 <script>
 import commentSubmit from './cmps/comment-submit.vue'
 import commentList from './cmps/comment-list.vue'
-import filter from './cmps/filter.vue'
-import CommentSubmit from './cmps/comment-submit.vue'
+import commentFilter from './cmps/comment-filter.vue'
+
 export default {
   name: 'app',
   components: {},
@@ -18,8 +18,7 @@ export default {
   components: {
     commentSubmit,
     commentList,
-    filter,
-    CommentSubmit,
+    commentFilter,
   },
 }
 </script>

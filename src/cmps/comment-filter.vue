@@ -1,5 +1,5 @@
 <template>
-  <input type="text" />
+  <input type="text" v-model="filterBy.txt" placeholder="filter" />
 </template>
 <script>
 import { debounce } from 'lodash'
