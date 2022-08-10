@@ -14,7 +14,6 @@
   </section>
 </template>
 <script>
-import { userService } from '../services/user.service.js'
 export default {
   name: 'login',
   data() {
