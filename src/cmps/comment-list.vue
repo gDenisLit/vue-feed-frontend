@@ -1,7 +1,11 @@
 <template >
   <section class="list-container">
     <ul class="clean-list">
-      <comment-preview v-for="comment in comments" :comment="comment" :key="comment._id"></comment-preview>
+      <comment-preview 
+        v-for="comment in comments" 
+        :comment="comment" 
+        :key="comment._id" 
+      />
     </ul>
   </section>
 </template>
@@ -11,11 +15,10 @@ export default {
   name: "comment-list",
   computed: {
     comments() {
-      return this.$store.getters.comments
+      const comments = this.$store.getters.comments
+      return JSON.parse(JSON.stringify(comments)).reverse()
     },
   },
-  components: {
-    commentPreview
-  }
+  components: { commentPreview }
 }
 </script>
