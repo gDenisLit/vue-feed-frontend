@@ -2,7 +2,6 @@ import { httpService } from './http.service'
 import { utilService } from './util.service'
 import { storageService } from './async-storage.service'
 import { userService } from './user.service'
-// import { socketService, SOCKET_EVENT_ITEM_ADDED } from './socket.service'
 
 export const commentService = {
   query,
@@ -11,7 +10,7 @@ export const commentService = {
   getById,
 }
 
-// _createComments()
+_createComments()
 
 function query(filterBy) {
   // var queryStr = (!filterBy) ? '' : `?name=${filterBy.name}&sort=anaAref`
@@ -28,15 +27,19 @@ function save(comment) {
   // if (comment._id) return storageService.put('comment', comment)
   // else return storageService.post('comment', comment)
 
-function remove(itemId) {
-  // return httpService.delete(`item/${itemId}`)
-  return storageService.remove('item', itemId)
+  if (comment._id) return httpService.put(`comment/${comment._id}`, comment)
+  else return httpService.post('comment', comment)
 }
 
-function _createItems() {
-  let items = JSON.parse(localStorage.getItem('item'))
-  if (!items) { items = utilService.getDemoItems() }
-  localStorage.setItem('item', JSON.stringify(items))
+function remove(commentId) {
+  return httpService.delete(`comment/${commentId}`)
+  // return storageService.remove('comment', commentId)
 }
 
-
+// function _createComments() {
+//   let comments = JSON.parse(localStorage.getComment('comment'))
+//   if (!comments) {
+//     comments = utilService.getDemoComments()
+//   }
+//   localStorage.setComment('comment', JSON.stringify(comments))
+// }
