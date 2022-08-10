@@ -1,7 +1,6 @@
 import { storageService } from './async-storage.service'
 import { utilService } from './util.service'
 import { httpService } from './http.service'
-import { socketService, SOCKET_EVENT_USER_UPDATED } from './socket.service'
 
 
 const USER_KEY = 'user_db'
