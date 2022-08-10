@@ -1,8 +1,7 @@
 <template >
   <section class="list-container">
     <ul class="clean-list">
-      <comment-preview v-for="comment in comments" 
-      :comment="comment" :key="comment._id"></comment-preview>
+      <comment-preview v-for="comment in comments" :comment="comment" :key="comment._id"></comment-preview>
     </ul>
   </section>
 </template>
@@ -14,9 +13,9 @@ export default {
     comments() {
       return this.$store.getters.comments
     },
-    components: {
-      commentPreview
-    }
+  },
+  components: {
+    commentPreview
   }
 }
 </script>
