@@ -12,7 +12,6 @@
 import { showErrorMsg } from '../services/event-bus.service'
 import { itemService } from '../services/comment.service'
 import { utilService } from '../services/util.service'
-import itemEditForm from '../cmps/item-edit-form.vue'
 import backBtn from '../cmps/back-btn.vue'
 
 export default {

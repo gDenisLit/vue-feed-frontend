@@ -1,4 +1,4 @@
-import { itemService } from '../../services/comment.service'
+import { itemService } from '../../services/item.service'
 import { socketService } from '../../services/socket.service'
 
 export const itemStore = {
