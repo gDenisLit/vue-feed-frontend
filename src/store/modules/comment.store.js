@@ -25,6 +25,7 @@ export const commentStore = {
       try {
         if (!filterBy) filterBy = { txt: '' }
         const comments = await commentService.query(filterBy)
+        console.log(comments)
         commit({ type: 'setComments', comments })
       } catch (err) {
         console.log('commentStore: Error in loadComments', err)
@@ -34,6 +35,7 @@ export const commentStore = {
     async saveComment({ commit }, { comment }) {
       try {
         const savedComment = await commentService.save(comment)
+        console.log(savedComment)
         commit({ type: 'updateComment', savedComment })
       } catch (err) {
         console.log('commentStore: Error in saveComment')
