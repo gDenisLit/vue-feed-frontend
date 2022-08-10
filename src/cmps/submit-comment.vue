@@ -14,6 +14,7 @@
 
 <script>
 export default {
+  name: 'submit-comment',
   data() {
     return {
       comment: {
@@ -24,11 +25,17 @@ export default {
   },
   methods: {
     async submitComment() {
-      const comment = JSON.parse(JSON.stringify(this.comment))
-      await this.$store.dispatch({
-        type: 'submitComment',
-        comment,
-      })
+      try {
+        const comment = JSON.parse(JSON.stringify(this.comment))
+        await this.$store.dispatch({
+          type: 'saveComment',
+          comment,
+        })
+      } catch (err) {
+        console.log(err)
+      } finally {
+        this.clearFields()
+      }
     },
     clearFields() {
       this.comment.email = ''

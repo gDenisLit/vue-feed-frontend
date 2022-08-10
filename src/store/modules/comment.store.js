@@ -1,63 +1,42 @@
-import { itemService } from '../../services/item.service'
+import { commentService } from '../../services/comment.service'
 import { socketService } from '../../services/socket.service'
 
-export const itemStore = {
+export const commentStore = {
   state: {
-    items: [],
+    comments: [],
   },
   getters: {
-    items({ items }) {
-      return items
+    comments({ comments }) {
+      return comments
     },
   },
   mutations: {
-    setItems(state, { items }) {
-      state.items = items
+    setComments(state, { comments }) {
+      state.comments = comments
     },
-    updateItem(state, { savedItem }) {
-      const idx = state.items.findIndex(i => i._id === savedItem._id)
+    updateComment(state, { savedComment }) {
+      const idx = state.comments.findIndex(i => i._id === savedComment._id)
       console.log('idx', idx)
-      if (idx < 0) state.items.push(savedItem)
-      else state.items[idx] = savedItem
-    },
-    removeItem(state, { itemId }) {
-      state.items = state.items.filter(item => item._id !== itemId)
+      if (idx < 0) state.comments.push(savedComment)
+      else state.comments[idx] = savedComment
     },
   },
   actions: {
-    async loadItems({ commit }) {
+    async loadComments({ commit }) {
       try {
-        const items = await itemService.query()
-        commit({ type: 'setItems', items })
-        // socketService.off(SOCKET_EVENT_ITEM_ADDED)
-        // socketService.on(SOCKET_EVENT_ITEM_ADDED, item => {
-        //     console.log('Got item from socket', item)
-        //     commit({ type: 'additem', item })
-        // })
-        // socketService.off(SOCKET_EVENT_ITEM_ABOUT_YOU)
-        // socketService.on(SOCKET_EVENT_ITEM_ABOUT_YOU, item => {
-        //     console.log('item about me!', item)
-        // })
+        const comments = await commentService.query()
+        commit({ type: 'setComments', comments })
       } catch (err) {
-        console.log('itemStore: Error in loadItems', err)
+        console.log('commentStore: Error in loadComments', err)
         throw err
       }
     },
-    async removeItem({ commit }, { itemId }) {
+    async saveComment({ commit }, { comment }) {
       try {
-        await itemService.remove(itemId)
-        commit({ type: 'removeItem', itemId })
+        const savedComment = await commentService.save(comment)
+        commit({ type: 'updateComment', savedComment })
       } catch (err) {
-        console.log('itemStore: Error in removeItem', err)
-        throw err
-      }
-    },
-    async saveItem({ commit }, { item }) {
-      try {
-        const savedItem = await itemService.save(item)
-        commit({ type: 'updateItem', savedItem })
-      } catch (err) {
-        console.log('itemStore: Error in saveItem')
+        console.log('commentStore: Error in saveComment')
         throw err
       }
     },
