@@ -24,6 +24,7 @@ export const commentStore = {
     async loadComments({ commit }, { filterBy }) {
       try {
         if (!filterBy) filterBy = { txt: '' }
+        console.log('filterBy', filterBy)
         const comments = await commentService.query(filterBy)
         console.log(comments)
         commit({ type: 'setComments', comments })
