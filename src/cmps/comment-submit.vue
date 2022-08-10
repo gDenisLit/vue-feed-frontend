@@ -1,5 +1,5 @@
 <template>
-  <form @submit="submitComment" class="item-edit flex flex-column">
+  <form @submit="submitComment" class="submit-comment flex flex-column">
     <input type="email" v-model="comment.email" placeholder="Email" />
     <textarea
       cols="30"
