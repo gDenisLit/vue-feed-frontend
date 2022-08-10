@@ -1,21 +1,25 @@
 .submit-comment {
     width: rem(550px);
-    margin-block-end: rem(20px);
-    padding: rem(15px);
-    
-    input{
+    padding: rem(15px) rem(20px);
+    background-color: $light-color3;
+
+    h1 {
+        margin-block-end: rem(20px);
+    }
+
+    input {
         padding: rem(12px);
         margin-bottom: rem(20px);
     }
 
-    textarea{
+    textarea {
         padding: rem(12px);
         font-size: rem(15px);
         margin-bottom: rem(15px);
         resize: none;
     }
 
-    button{
+    button {
         width: rem(65px);
         height: rem(35px);
         text-align: center;

@@ -1,6 +1,6 @@
 <template >
   <section class="list-container">
-    <ul class="clean-list">
+    <ul class="clean-list list-wrapper">
       <comment-preview 
         v-for="comment in comments" 
         :comment="comment" 

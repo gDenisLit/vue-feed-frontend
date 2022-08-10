@@ -3,14 +3,13 @@
 
     &__inner {
         width: 100%;
-        background-color: $light-color3;
-        padding: rem(30px);
+        padding: rem(50px);
 
         .wrapper {
             width: max-content;
             height: min-content;
             padding: rem(30px);
-            background-color: $light-color2;
+            background-color: $light-color1;
 
             .bottom-wrapper {
                 background-color: $light-color;
